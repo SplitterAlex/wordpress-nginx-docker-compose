@@ -53,12 +53,12 @@ services:
     links:
       - mysql:mysql
 
-  mailhog:
-    container_name: ${APP_NAME}-mailhog
-    image: mailhog/mailhog
+  mailcatcher:
+    container_name: ${APP_NAME}-mailcatcher
+    image: schickling/mailcatcher
     ports:
-      - "8025:8025"
       - "1025:1025"
+      - "1080:1080"
 
   composer:
     image: composer
